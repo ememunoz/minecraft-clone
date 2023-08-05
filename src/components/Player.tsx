@@ -10,7 +10,7 @@ export const Player = () => {
 
   useFrame(({ camera }) => {
     if (!playerRef.current) return
-    const { forward, backward, leftward, rightward, dirt } = getKeys()
+    const { forward, backward, leftward, rightward } = getKeys()
     const yVectorValue = playerRef.current.linvel().y ?? 0
     const frontVector = new Vector3(
       0,

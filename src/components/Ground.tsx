@@ -1,7 +1,7 @@
+import { ThreeEvent } from '@react-three/fiber'
 import { RigidBody } from '@react-three/rapier'
 
 import { textures } from '../assets/textures'
-import { ThreeEvent } from '@react-three/fiber'
 import { useStore } from '../hooks/useStore'
 
 export const Ground = () => {
@@ -11,7 +11,8 @@ export const Ground = () => {
 
   const handleClick = (e: ThreeEvent<MouseEvent>) => {
     e.stopPropagation()
-    const [x, y, z] = Object.values(e.point).map(v => Math.ceil(v))
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [x, _, z] = Object.values(e.point).map(v => Math.ceil(v))
     addCube(x, 0, z)
   }
 
