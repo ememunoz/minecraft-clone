@@ -25,7 +25,6 @@ export const Cube = ({ position, texture }: Props) => {
     e.stopPropagation()
     if (!e.faceIndex || !boxRef.current) return
     const clickedFace = Math.floor(e.faceIndex / 2)
-    console.log('clickedface', clickedFace)
     const { x, y, z } = boxRef.current.translation()
     if (e.altKey) {
       removeCube(x, y, z)

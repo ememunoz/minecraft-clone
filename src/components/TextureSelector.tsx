@@ -49,8 +49,6 @@ export const TextureSelector = () => {
     return () => clearTimeout(visibilityTimeout)
   }, [activeTexture])
 
-  console.log(Object.entries(images))
-
   return (
     <>
       {visible && (
